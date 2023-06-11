@@ -79,5 +79,22 @@ RUN;
 PROC CONTENTS DATA=YUI._ALL_   varnum;
 RUN;
 
+* DATA statement contains two data set names;
+data A B;
+set sashelp.class(keep= Sex name);
+output A ;
+run;
+proc print data=A;
+run;
+proc print data=B;
+run;
+* to read Single Observation;
+data single_obs;
+set sashelp.class(keep= Sex name);
+if _n_ = 5 then
+output single_obs;
+run;
+proc print data=single_obs;
+run;
 
 

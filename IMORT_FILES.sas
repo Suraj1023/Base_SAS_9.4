@@ -1,4 +1,4 @@
-f* Importing an Excel File with an XLSX Extension ;
+* Importing an Excel File with an XLSX Extension ;
 proc import DATAFILE='/home/u58028466/2023/PowerBIData.xlsx' 
 out = actual
 DBMS=XLSX
